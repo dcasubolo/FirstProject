@@ -38,10 +38,10 @@ public class TodoBusinessImplMockitoTest {
 	public void usingMockito3() {
 		TodoService todoService = mock(TodoService.class);
 		List<String> allTodos = Arrays.asList();
-		when(todoService.retrieveTodos("Davide")).thenReturn(allTodos);
+		when(todoService.retrieveTodos("Francesca")).thenReturn(allTodos);
 		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
 		List<String> todos = todoBusinessImpl
-				.retrieveTodosRelatedToSpring("Davide");
+				.retrieveTodosRelatedToSpring("Francesca");
 		assertEquals(0, todos.size());
 	}
 }
